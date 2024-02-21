@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+spin='-\|/'
+
+printf"$((4%4))"
+
+i=0
+while [[ true ]]; do
+    printf "\r${spin:$((i%4)):1}"
+    sleep 0.1
+    ((i++))
+done
+
+
+exit 0
