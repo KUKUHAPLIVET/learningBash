@@ -8,9 +8,12 @@ clone_project(){
   if [ ! -d "home/bob/git/${project_dir}" ]; then
     cd /home/bob/git
     git clone ${project}
+  fi
+}
+
+git_checkout() {
     cd "${project_dir}"
     git checkout "${branch}"
-  fi
 }
 
 
@@ -23,4 +26,4 @@ find_files(){
 
 clone_project
 find_files
-
+git_checkout
